@@ -148,26 +148,16 @@ function getexternaladdress(gateway,callback) {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var network = require('network');
 
-var os = require('os')
+network.get_gateway_ip(function(err, ip) {
+    getexternaladdress(ip,function(err,rslt){
+        console.log(err,rslt);
+    });
 
-var interfaces = os.networkInterfaces();
-var addresses = [];
-for (k in interfaces) {
-    for (k2 in interfaces[k]) {
-        var address = interfaces[k][k2];
-        if (address.family == 'IPv4' && !address.internal) {
-            addresses.push(address.address)
-        }
-    }
-}
+    console.log(err || ip); // err may be 'No active network interface found.'
+})
 
-console.log(interfaces)
-
-getexternaladdress("10.6.1.1",function(err,rslt){
-    console.log(err,rslt);
-
-});
 //
 //portmap("10.6.1.1",8080,8080,20,function(err,rslt){
 //    console.log(err,rslt);
