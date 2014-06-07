@@ -1,10 +1,24 @@
 {
-"name": "application-name",
-"version": "0.0.1",
-"private": true,
+"name": "pmp",
+"version": "0.0.2",
+"description": "Cross platform NAT utility using NAT-PMP (port mapping protocol)",
+"main": "./lib/pmp.js",
+"private": false,
+"homepage":"https://github.com/level451/pmp",
+    "keywords": [
+        "pmp",
+        "nat-pmp",
+        "nat",
+        "upnp IGN",
+        "port mapping"
+    ],
 "scripts": {
 "start": "node pmp.js"
 },
+    "author": {
+        "name": "Todd Witzel",
+        "email": "todd@level451.com"
+    },
 "dependencies": {
     "network": "*"
 }
