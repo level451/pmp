@@ -37,6 +37,6 @@ portMap([gateway],localport,externalport,ttl,function(error,results) - maps an e
 
     ttl is the time in seconds you want this mapping to remain effective.
 
-pmp.portMap('',3000,3000,20,function(err,rslt){1
-    console.log(err,rslt);
-});
+    pmp.portMap('',3000,3000,20,function(err,rslt){1
+        console.log(err,rslt);
+    });
