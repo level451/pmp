@@ -8,7 +8,7 @@ Commands:
 
 getExternalAddress([gateway],function(error,result) - returns the external ip address
 
-    gateway is optional (just pass an empty string or null if you don't know the address)
+    gateway is optional (just pass an empty string or null if you do not know the address)
     If you do know the address it does speed things up - otherwise it will try to find it.
 
     error returns an error number or 0 if successful

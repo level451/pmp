@@ -1,6 +1,6 @@
 {
 "name": "pmp",
-"version": "0.0.3",
+"version": "0.0.4",
 "description": "Cross platform NAT utility using NAT-PMP (port mapping protocol)",
 "main": "./lib/pmp.js",
 "private": false,
@@ -12,6 +12,9 @@
         "upnp IGN",
         "port mapping"
     ],
+"bugs":{ "url" : "http://github.com/level451/pmp/issues"
+    , "email" : "todd@level451.com"
+},
 "scripts": {
 "start": "node pmp.js"
 },
