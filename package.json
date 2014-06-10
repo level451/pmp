@@ -1,6 +1,6 @@
 {
 "name": "pmp",
-"version": "0.0.4",
+"version": "0.0.5",
 "description": "Cross platform NAT utility using NAT-PMP (port mapping protocol)",
 "main": "./lib/pmp.js",
 "private": false,
