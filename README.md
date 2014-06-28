@@ -2,7 +2,7 @@ NODE Implementation of the NAT-PMP port mapping protocol
 
 SEE http://miniupnp.free.fr/nat-pmp.html
 
-Unlike some similar packages this one should work on all platforms including windows.
+This should work on all platforms including windows.
 
 Commands:
 
