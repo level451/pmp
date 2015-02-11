@@ -10,7 +10,8 @@ pmp.findGateway("",function(err,rslt){
 
 
     pmp.getExternalAddress(rslt.ip,function(err,rslt){
-        console.log(err,rslt);
+          console.log(err,rslt);
+        //comment
     });
 
 
