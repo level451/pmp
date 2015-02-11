@@ -55,7 +55,8 @@ function searchGateway(gateway, callback) {
 
     var onmessage = function(message, rinfo) {
         console.log("on message from :" + rinfo.address);
-        message = message.toString().toLowerCase();
+        msg = message.toString(); // keep case of incoming message
+        message = msg.toLowerCase(); // changed to lower because different routers report different case in strings
 
         if (message.substr(0, 15) =="http/1.1 200 ok" && message.indexOf("urn:schemas-upnp-org:device:internetgatewaydevice:1") > 0 && message.indexOf("location:")>0) {
             console.log("Internet gateway device found at: "+rinfo.address);
@@ -69,7 +70,7 @@ function searchGateway(gateway, callback) {
 
 
 
-        var l = url.parse(message.match(/location:(.+?)\r\n/i)[1].trim());
+        var l = url.parse(msg.match(/location:(.+?)\r\n/i)[1].trim()); // changed to incoming case for message
         //var l =url.parse("http://10.6.1.1:33030/rootDesc.xml");
         console.log("after l");
         console.log("UPNP URL:"+ l.href);

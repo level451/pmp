@@ -6,11 +6,18 @@ var pmp = require('./lib/pmp.js');
 
 
 pmp.findGateway("",function(err,rslt){
-    console.log(err,rslt);
+    console.log(err,rslt.toString());
+
+
+    pmp.getExternalAddress(rslt.ip,function(err,rslt){
+        console.log(err,rslt);
+    });
+
+
 });
 
 
-//pmp.getExternalAddress('10.6.1.1',function(err,rslt){
+//pmp.getExternalAddress(upnphostname,function(err,rslt){
 //    console.log(err,rslt);
 //});
 //
