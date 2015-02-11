@@ -161,7 +161,7 @@ Gateway.prototype.getExternalIP = function(callback) {
         if (err) callback(err);
         else callback(null,
             xml.match(/<NewExternalIPAddress>(.+?)<\/NewExternalIPAddress>/i)[1]);
-    });
+     });
 
 }
 
