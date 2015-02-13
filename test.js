@@ -5,26 +5,17 @@ var pmp = require('./lib/pmp.js');
 // the first parameter is your gateway if you know it - otherwise it will try to find it.
 
 
-pmp.findGateway("",function(err,rslt){
-    console.log(err,rslt.toString());
+pmp.findGateway("",function(err,gateway){
+    console.log(err,gateway.ip);
 
-
-    pmp.getExternalAddress(rslt.ip,function(err,rslt){
-          console.log(err,rslt);
-        //comment
+    pmp.portMap(gateway,8888,8888,20,'DESCRIPTION',function(err,rslt){
+        console.log(err,rslt);
     });
-
 
 });
 
 
-//pmp.getExternalAddress(upnphostname,function(err,rslt){
-//    console.log(err,rslt);
-//});
-//
-//
-//
-//pmp.portMap('',8888,8888,20,function(err,rslt){
+//pmp.portMap(gateway,8888,8888,20,"DESCRIPTION',function(err,rslt){
 //    console.log(err,rslt);
 //});
 
