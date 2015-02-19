@@ -6,14 +6,15 @@ var pmp = require('./lib/pmp.js');
 
 
 pmp.findGateway("",function(err,gateway){
+    if (!err){
     console.log(err,gateway.ip);
-
-    pmp.portMap(gateway,8888,8888,0,'cs4 return',function(err,rslt){
-        console.log(err,rslt);
-    });
-
+    }else {
+//    pmp.portMap(gateway,8888,8888,0,'cs4 return',function(err,rslt){
+//        console.log(err,rslt);
+//    });
+        pmp.portMap(gateway, 8888, 8888, 0, 'cs4 return');
+    }
 });
-
 
 //pmp.portMap(gateway,8888,8888,20,"DESCRIPTION',function(err,rslt){
 //    console.log(err,rslt);
