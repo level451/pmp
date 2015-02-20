@@ -9,39 +9,18 @@ var gateway;
 pmp.findGateway("",function(err,gateway){
     ///console.log(err,gateway.ip);
     if(err){
-        console.log('Can not find gateway line 12');
-      //  gateway.ip = 'unknown';
+        console.log('Gateway not found',err);
     }
     else{
         console.log('gateway found: '+ gateway.ip + ", External IP: "+ gateway.externalIP);
-        pmp.portMap(gateway,7870,7870,5,'csx return',function(err,rslt){
+        pmp.portMap(gateway,7870,7870,0,'csx return',function(err,rslt){
 
             if(!err) {
-                    console.log("Sucessfully logged port: "+ gateway.externalIP + ": " + gateway.publicport + " to " + gateway.ip + ": " + gateway.privateport) ;
+                    console.log("Sucessfully logged port: "+ gateway.externalIP + ": " + gateway.publicPort + " to " + gateway.ip + ": " + gateway.privatePort) ;
             }
             else{
                 console.log(err,rslt);
             }
-
-            pmp.portMap(gateway,7871,7871,0,'csx return',function(err,rslt) {
-
-                if (!err) {
-                    console.log("Sucessfully logged port: " + gateway.externalIP + ": " + gateway.publicport + " to " + gateway.ip + ": " + gateway.privateport);
-                }
-                else {
-                    console.log(err, rslt);
-                }
-
-                pmp.portMap(gateway,7872,7872,0,'csx return',function(err,rslt) {
-
-                    if (!err) {
-                        console.log("Sucessfully logged port: " + gateway.externalIP + ": " + gateway.publicport + " to " + gateway.ip + ": " + gateway.privateport);
-                    }
-                    else {
-                        console.log(err, rslt);
-                    }
-                });
-            });
 
 
         });
