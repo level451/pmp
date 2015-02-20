@@ -1,3 +1,7 @@
+New version .5 supports upnp and pmp - new docs comming
+
+This information is for version 2.9 
+
 NODE Implementation of the NAT-PMP port mapping protocol
 
 SEE http://miniupnp.free.fr/nat-pmp.html
