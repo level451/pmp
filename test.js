@@ -9,11 +9,11 @@ var gateway;
 pmp.findGateway("",function(err,gateway){
     ///console.log(err,gateway.ip);
     if(err){
-        console.log('Can not find gateway');
+        console.log('Can not find gateway line 12');
       //  gateway.ip = 'unknown';
     }
     else{
-        console.log('gateway found: '+ gateway.name);
+        console.log('gateway found: '+ gateway.ip + ", External IP: "+ gateway.externalIP);
         pmp.portMap(gateway,7870,7870,0,'csx return',function(err,rslt){
 
             if(!err) {
