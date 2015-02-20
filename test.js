@@ -14,7 +14,7 @@ pmp.findGateway("",function(err,gateway){
     }
     else{
         console.log('gateway found: '+ gateway.ip + ", External IP: "+ gateway.externalIP);
-        pmp.portMap(gateway,7870,7870,0,'csx return',function(err,rslt){
+        pmp.portMap(gateway,7870,7870,5,'csx return',function(err,rslt){
 
             if(!err) {
                     console.log("Sucessfully logged port: "+ gateway.externalIP + ": " + gateway.publicport + " to " + gateway.ip + ": " + gateway.privateport) ;
