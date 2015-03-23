@@ -1,5 +1,5 @@
 
-var pmp = require('./lib/pmp.js');
+var pmp = require('pmp');
 var gateway;
 // this should return your external ip address as reported by your gateway - not from an external site
 
@@ -13,7 +13,7 @@ pmp.findGateway("",function(err,gateway){
     }
     else{
         console.log('gateway found: '+ gateway.ip + ", External IP: "+ gateway.externalIP);
-        pmp.portMap(gateway,7870,7870,0,'csx return',function(err,rslt){
+        pmp.portMap(gateway,7870,7870,0,'label',function(err,rslt){
 
             if(!err) {
                     console.log("Sucessfully logged port: "+ gateway.externalIP + ": " + gateway.publicPort + " to " + gateway.ip + ": " + gateway.privatePort) ;
