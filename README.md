@@ -1,5 +1,8 @@
 New version .5 supports upnp and pmp - new docs comming
 
+Until the docs are here - look at the example in test.js 
+
+
 This information is for version 2.9 
 
 NODE Implementation of the NAT-PMP port mapping protocol
