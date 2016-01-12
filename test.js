@@ -16,7 +16,7 @@ pmp.findGateway("",function(err,gateway){
         pmp.portMap(gateway,7870,7870,0,'label',function(err,rslt){
 
             if(!err) {
-                    console.log("Sucessfully forwarded port: "+ gateway.externalIP + ": " + gateway.publicPort + " to " + gateway.ip + ": " + gateway.privatePort) ;
+                    console.log("Sucessfully forwarded port: "+ gateway.externalIP + ": " + gateway.publicPort + " to this ip address port:" + gateway.privatePort + " gateway ip : " +gateway.ip ) ;
             }
             else{
                 console.log(err,rslt);
